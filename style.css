@@ -51,24 +51,26 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  border: 1px solid black;
-  background-color: whitesmoke;
-  box-shadow:
-  -15px 0 0 0 #3f4549,             /* left bar */
-   15px 0 0 0 #3f4549,             /* right bar */
-  -22px 0 0 0 #4169E1,             /* left strip*/
-   22px 0 0 0 #4169E1;             /* right strip*/
 
-     /* base gradient for a solid bevelled feel */
-  background: linear-gradient(to bottom, #fafafa, #e6e6e6);
-
-    /* crisp outer border */
+     /* crisp outer border */
   border: 1px solid rgba(0,0,0,0.15);
 
+    /* base gradient for a solid bevelled feel */
+  background: linear-gradient(to bottom, #fafafa, #e6e6e6);
+
+  background-color: whitesmoke;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.6),
-    0 8px 16px rgba(0,0,0,0.2),
-    0 20px 40px rgba(0,0,0,0.15),
+    /* 1) tiny inset highlight */
+  inset 0 1px 0 rgba(255,255,255,0.6),
+    /* 2) main drop-shadow */
+  0 8px 16px rgba(0,0,0,0.2),
+    /* 3) ground shadow */
+  0 20px 40px rgba(0,0,0,0.15),
+  
+  -15px 0 0 0 #3f4549,             /* 4) left bar */
+   15px 0 0 0 #3f4549,             /* 5) right bar */
+  -22px 0 0 0 #4169E1,             /* 6) left strip*/
+   22px 0 0 0 #4169E1;             /* 7) right strip*/
 
     /* gentle 3D tilt */
   transform: perspective(800px) rotateX(3deg);
